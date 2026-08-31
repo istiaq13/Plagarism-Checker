@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #0f172a;
+  --card: #ffffff;
+  --card-border: #e2e8f0;
+  --primary: #14b8a6;
+  --secondary: #0d9488;
+  --accent-exact: #e11d48;
+  --accent-paraphrase: #0d9488;
+  --accent-moderate: #d97706;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Minimal Panels */
+.clean-panel {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+}
+
+/* Sentence Highlighting - Clean & Subtle */
+.sentence-highlight-exact {
+  background-color: #fee2e2;
+  border-bottom: 2px solid #ef4444;
+  color: #991b1b;
+  transition: background-color 0.15s ease;
+  border-radius: 2px;
+  padding: 1px 2px;
+}
+
+.sentence-highlight-exact:hover, .sentence-highlight-exact.active {
+  background-color: #fecaca;
+}
+
+.sentence-highlight-paraphrase {
+  background-color: #ccfbf1;
+  border-bottom: 2px solid #0d9488;
+  color: #115e59;
+  transition: background-color 0.15s ease;
+  border-radius: 2px;
+  padding: 1px 2px;
+}
+
+.sentence-highlight-paraphrase:hover, .sentence-highlight-paraphrase.active {
+  background-color: #99f6e4;
+}
+
+.sentence-highlight-moderate {
+  background-color: #fef3c7;
+  border-bottom: 2px solid #f59e0b;
+  color: #92400e;
+  transition: background-color 0.15s ease;
+  border-radius: 2px;
+  padding: 1px 2px;
+}
+
+.sentence-highlight-moderate:hover, .sentence-highlight-moderate.active {
+  background-color: #fde68a;
+}
+
+.sentence-highlight-low {
+  background-color: transparent;
+  border-bottom: 1px dashed #cbd5e1;
+  color: #334155;
+  border-radius: 2px;
+  padding: 1px 2px;
+}
+
+.sentence-highlight-target-active {
+  background-color: #ccfbf1 !important;
+  border: 1px solid #0d9488 !important;
+  color: #0f766e !important;
+  font-weight: 500;
+  border-radius: 4px;
+  padding: 2px 4px;
+}
